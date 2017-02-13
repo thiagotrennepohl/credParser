@@ -54,8 +54,7 @@ func main() {
 		var user User
 		var passwords Passwords
 		for _, each := range csvData {
-			log.Println(each[0], " ", each[1], " ", each[2])
-
+			
 			username := each[0] + "@" + each[2]
 			encryptedPwd := md5Hash(each[1])
 			passwords.Pwd = encryptedPwd
